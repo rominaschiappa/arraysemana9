@@ -36,7 +36,16 @@ function showList(array) {
   });
 }
 
+let palabras = strangeArray.filter(item => typeof item === "string");
+
+
+
 document.addEventListener("DOMContentLoaded", (e) => {
+  showList(palabras.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" })));
+
+   
+  
+  
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
 });
